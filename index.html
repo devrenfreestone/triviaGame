@@ -5,13 +5,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/javascript/app.js"></script>
+	<!--I took the following link out because the script wasn't working when I tried setting up the js in another file-->
+	<!-- <script src="assets/javascript/app.js"></script> -->
 </head>
 <body>
 	<div id="centerColumn">
 		<div class = "row"><h1 id="title">Harry Potter Trivia</h1>
 		</div>
-		<div class = "row"><p id = "questionBox">hi</p>
+		<div class = "row"><p id="questionBox">hi</p>
 		</div>
 
 
@@ -20,4 +21,40 @@
 
 	</div>
 </body>
+<script>
+var question1 = "Where did Hermione send her parents in book 7?";
+var q1answers = ["France", "Australia", "United States of America", "Italy"];
+var question2 = "How many galleons does the Tri-Wizard Tournament winner receive?";
+var q2answers = ["1,000", "10,000", "100,000", "2"];
+var question3 = "Who was the Half-Blood Prince?";
+var q3answers = ["Eileen Prince", "James Potter", "Albus Dumbledore", "Severus Snape"];
+var question4 = "What is the Dursley's street address?";
+var q4answers = ["#4 Prival Street", "#14 Privet Lane", "#4 Privet Drive", "#394 Perry Avenue"];
+var question5 = "Who was not one of Harry's Defense Against the Dark Arts Teachers?";
+var q5answers = ["Remus Lupin", "Delores Umbridge", "Minerva McGonagall", "Gilderoy Lockhart"];
+var question6 = "What is the only unforgiveable curse Harry doesn't use?";
+var q6answers = ["Crucio", "Avada Kedavra", "Imperio", "Harry would never use an unforgiveable curse!"];
+var questions = [question1, question2, question3, question4, question5, question6];
+var answers = [q1answers, q2answers, q3answers, q4answers, q5answers, q6answers];
+var questionBox = $("#questionBox");
+var key = []
+
+
+
+
+
+for (var i = 0; i < questions.length; i++) {
+	questionBox.append("<div>" + questions[i] + "<br>")
+		for (var j = 0; j < answers[j].length; j++){
+			questionBox.append('<input type="radio"/>' + answers.j + "</input" + "<br>" + "<br>" + "</div>")};
+		
+		
+	console.log(questions[i], answers.j);
+};
+</script>
 </html>
+
+
+
+
+

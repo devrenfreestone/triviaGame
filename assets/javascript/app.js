@@ -17,10 +17,11 @@ var questionBox = $("#questionBox");
 
 
 for (var i = 0; i < questions.length; i++) {
-	for (var j = 0; j < answers.length; j++)
-	$(questionBox).html("<div>" + questions[i] + "<br>" + answers[j] + "</div>");
+	var j = 0; j < answers.length; j++;
+	questionBox.html("<div>" + questions[i] + "<br>" + answers[j] + "</div>");
 	console.log(questions[i]);
 };
+
 
 
 
