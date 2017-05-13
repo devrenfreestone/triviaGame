@@ -12,8 +12,11 @@
 	<div id="centerColumn">
 		<div class = "row"><h1 id="title">Harry Potter Trivia</h1>
 		</div>
-		<div class = "row"><p id="questionBox">hi</p>
+		<div class = "row"><p id="questionBox">Hi, click Start Game to begin. Try and answer before the timer runs out...</p>
+		<br>
+		<p id="timeLeft"></p>
 		</div>
+		<button id="start">Start Game</button>
 
 
 
@@ -37,20 +40,52 @@ var q6answers = ["Crucio", "Avada Kedavra", "Imperio", "Harry would never use an
 var questions = [question1, question2, question3, question4, question5, question6];
 var answers = [q1answers, q2answers, q3answers, q4answers, q5answers, q6answers];
 var questionBox = $("#questionBox");
-var key = []
+var radioName = [1,2,3,4,5,6]
+var time = 120
 
 
 
+function triviaGame() {
+		
+setTimeout(endGame, [5000]);
+
+$("#timeLeft").html(time);	
 
 
 for (var i = 0; i < questions.length; i++) {
-	questionBox.append("<div>" + questions[i] + "<br>")
+	questionBox.append("<div><br>" + questions[i] + "<br><br>")
 		for (var j = 0; j < answers[j].length; j++){
-			questionBox.append('<input type="radio"/>' + answers.j + "</input" + "<br>" + "<br>" + "</div>")};
+			questionBox.append('<input type="radio" name="' + radioName[i] + '"/>' + " " + answers[i][j] + "</input" + "<br>" + "<br>" + "</div>")};
 		
 		
-	console.log(questions[i], answers.j);
+	
+
 };
+}
+
+function countDown() {
+	time = time - 1;
+}
+
+function timeLeft() {
+	setInterval(countDown, 1000);
+}
+
+
+
+
+$("#start").on("click", function(){
+	triviaGame();
+	timeLeft()
+	$(this).hide();
+});
+
+function endGame() {
+	alert("the game has ended");
+}
+	
+	
+
 </script>
 </html>
 
