@@ -1,0 +1,20 @@
+body{
+	background: #bcd;
+}
+
+#centerColumn{
+	padding: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
+	background: #ccc;
+	height: 10000px;
+}
+
+#title{
+	text-align: center;
+	color: #777;
+}
+
+#questionBox{
+	padding: 3%;
+}
